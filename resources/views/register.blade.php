@@ -28,7 +28,7 @@
         @include("Template.alert")
         <div class="row g-5 align-items-center">
             <h1 class="display-3 text-primary">Register</h1>
-            <form action="/registerrequest" method="POST">                
+            <form action="{{ route('register.form') }}" method="POST">                
             @csrf
                 <div class="row">
                     <div class="col-lg-6">
