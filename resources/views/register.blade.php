@@ -1,10 +1,11 @@
 @section("title", "JUDUL")
 @extends("template.main")
 @section("body")
+@include("Template.alert")
 
 
 <!-- Banner 1 -->
-<div class="container-fluid py-5 hero-header">
+<div class="container-fluid hero-header align-items-center">
     <!-- Success message -->
     @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -24,8 +25,8 @@
             </button>
         </div>
     @endif
+    
     <div class="container py-5">
-        @include("Template.alert")
         <div class="row g-5 align-items-center">
             <h1 class="display-3 text-primary">Register</h1>
             <form action="{{ route('register.form') }}" method="POST">                
@@ -62,7 +63,6 @@
                         </div>
                     </div>
                 </div>
-                
             </form>
             <h4 class="mb-3 text-secondary" style="margin-top: 10px; margin-left: 5px;"><a
                     href="{{ url('/login') }}">Already Have An Account?</a></h4>
@@ -78,4 +78,5 @@
 </div>
 
 <!-- Hero End -->
+
 
